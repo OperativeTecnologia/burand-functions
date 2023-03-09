@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "node16",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "strict": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "noPropertyAccessFromIndexSignature": false
+  }
+}

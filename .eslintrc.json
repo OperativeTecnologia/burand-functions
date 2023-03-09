@@ -1,0 +1,3 @@
+{
+  "extends": "@burand/eslint-config-functions"
+}
