@@ -1,5 +1,10 @@
-import { getFirestore } from 'firebase-admin/firestore';
-import type { DocumentReference, WriteResult, CollectionReference, SetOptions } from 'firebase-admin/firestore';
+import {
+  getFirestore,
+  DocumentReference,
+  WriteResult,
+  CollectionReference,
+  SetOptions
+} from 'firebase-admin/firestore';
 
 import { DocumentNotFoundError } from '../exceptions/DocumentNotFoundError.js';
 import { AddDocument, SetDocument, UpdateDocument } from '../typings/repoTypes.js';

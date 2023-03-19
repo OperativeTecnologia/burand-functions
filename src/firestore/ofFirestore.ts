@@ -1,4 +1,4 @@
-import type { DocumentData, DocumentSnapshot } from 'firebase-admin/firestore';
+import { DocumentData, DocumentSnapshot } from 'firebase-admin/firestore';
 
 import { toNativeTypes } from './toNativeTypes.js';
 
