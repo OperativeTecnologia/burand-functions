@@ -1,10 +1,17 @@
 {
-  "name": "@burand/functions",
   "private": true,
+  "name": "@burand/functions",
+  "version": "1.0.0",
+  "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
   "scripts": {
     "clean": "rimraf lib",
     "lint": "tsc --noEmit && eslint --ext .js,.ts .",
     "build": "npm run clean && tsc"
+  },
+  "homepage": "https://github.com/flavianoredressa/burand-functions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flavianoredressa/burand-functions.git"
   },
   "engines": {
     "node": "18"
