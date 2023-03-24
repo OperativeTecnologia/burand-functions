@@ -136,7 +136,6 @@ export abstract class FirebaseAbstract<T extends Model> {
    *
    * @param ids - Ids dos documentos a serem buscados.
    * @param options - Um objeto para configurar o comportamento definido.
-   * @throws {DocumentNotFoundError}
    * @returns Um `Promise` resolvida com o conteúdo do documentos.
    */
   public async getByIds(ids: string[], options: IReadOptions = { timestamps: true }): Promise<T[]> {
@@ -167,7 +166,6 @@ export abstract class FirebaseAbstract<T extends Model> {
    * @param orderByDirection - A direção na qual os resultados devem ser ordenados.
    * @param options - As opções adicionais para a leitura dos documentos.
    * @returns Uma promessa que resolve em um array de documentos T.
-   * @throws {DocumentNotFoundError} - Se nenhum documento for encontrado com os filtros fornecidos.
    */
   protected async getWhere(
     field: keyof T,
@@ -188,11 +186,7 @@ export abstract class FirebaseAbstract<T extends Model> {
       q = q.orderBy(orderBy as string, orderByDirection || 'asc');
     }
 
-    const { docs, empty } = await q.get();
-
-    if (empty) {
-      throw new DocumentNotFoundError();
-    }
+    const { docs } = await q.get();
 
     return docs.map(document => ofFirestore(document, options.timestamps));
   }
@@ -207,7 +201,6 @@ export abstract class FirebaseAbstract<T extends Model> {
    * @param orderByDirection - A direção na qual os resultados devem ser ordenados.
    * @param options - As opções adicionais para a leitura dos documentos.
    * @returns Uma promessa que resolve em um array de documentos T.
-   * @throws {DocumentNotFoundError} - Se nenhum documento for encontrado com os filtros fornecidos.
    */
   protected async getWhereMany(
     filters: IFirebaseWhere<T>[],
@@ -230,11 +223,7 @@ export abstract class FirebaseAbstract<T extends Model> {
       q = q.orderBy(orderBy as string, orderByDirection || 'asc');
     }
 
-    const { docs, empty } = await q.get();
-
-    if (empty) {
-      throw new DocumentNotFoundError();
-    }
+    const { docs } = await q.get();
 
     return docs.map(document => ofFirestore(document, options.timestamps));
   }

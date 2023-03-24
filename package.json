@@ -1,7 +1,6 @@
 {
-  "private": true,
   "name": "@burand/functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
   "scripts": {
     "clean": "rimraf lib",
@@ -74,7 +73,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@burand/eslint-config-functions": "github:flavianoredressa/burand-eslint-config-functions",
+    "@burand/eslint-config-functions": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.2.0",
