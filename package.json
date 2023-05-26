@@ -62,6 +62,9 @@
     "./typings": {
       "types": "./lib/typings/index.d.ts",
       "import": "./lib/typings/index.js"
+    },
+    "./tsconfig.json": {
+      "default": "./tsconfig.json"
     }
   },
   "dependencies": {
