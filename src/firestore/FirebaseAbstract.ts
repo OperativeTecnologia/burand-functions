@@ -1,19 +1,19 @@
 import {
-  getFirestore,
-  DocumentReference,
-  WriteResult,
   CollectionReference,
+  DocumentReference,
+  OrderByDirection,
   SetOptions,
   WhereFilterOp,
-  OrderByDirection
+  WriteResult,
+  getFirestore
 } from 'firebase-admin/firestore';
 
 import { DocumentNotFoundError } from '../exceptions/DocumentNotFoundError.js';
 import { AddDocument, IFirebaseWhere, SetDocument, UpdateDocument } from '../typings/repoTypes.js';
-import { ofFirestore } from './ofFirestore.js';
-import { toFirestore } from './toFirestore.js';
-import { serverTimestamp } from './serverTimestamp.js';
 import { Model } from './Model.js';
+import { ofFirestore } from './ofFirestore.js';
+import { serverTimestamp } from './serverTimestamp.js';
+import { toFirestore } from './toFirestore.js';
 
 type IWriteOptions = {
   /**

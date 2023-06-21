@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { getAuth } from 'firebase-admin/auth';
 
 import { ApiError } from '../exceptions/ApiError.js';
