@@ -39,8 +39,10 @@ export type UpdateDocument<T extends Model> = {
  * @property {WhereFilterOp} operator - O operador a ser usado na cláusula where (por exemplo, "==" ou ">").
  * @property {unknown} value - O valor a ser comparado na cláusula where.
  */
-export type IFirebaseWhere<T extends Model> = {
-  field: keyof T;
-  operator: WhereFilterOp;
-  value: unknown;
-};
+export type FirebaseWhere<T extends Model> =
+  | {
+      field: keyof T;
+      operator: WhereFilterOp;
+      value: unknown;
+    }
+  | [keyof T, WhereFilterOp, unknown];

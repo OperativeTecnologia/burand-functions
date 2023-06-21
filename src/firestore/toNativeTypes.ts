@@ -22,9 +22,7 @@ export function toNativeTypes(obj: any): any {
   const clone: Record<string, unknown> = {};
 
   Object.keys(obj).forEach(key => {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      clone[key] = toNativeTypes(obj[key]);
-    }
+    clone[key] = toNativeTypes(obj[key]);
   });
 
   return clone;
