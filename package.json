@@ -39,6 +39,9 @@
       ],
       "typings": [
         "./lib/typings"
+      ],
+      "utils": [
+        "./lib/utils"
       ]
     }
   },
@@ -62,6 +65,10 @@
     "./typings": {
       "types": "./lib/typings/index.d.ts",
       "import": "./lib/typings/index.js"
+    },
+    "./utils": {
+      "types": "./lib/utils/index.d.ts",
+      "import": "./lib/utils/index.js"
     },
     "./tsconfig.json": {
       "default": "./tsconfig.json"
