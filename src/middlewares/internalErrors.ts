@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import { ZodError } from 'zod';
 
-import { AppError } from '../exceptions/AppError.js';
 import { ApiError } from '../exceptions/ApiError.js';
+import { AppError } from '../exceptions/AppError.js';
 
 /**
  * Middleware responsável por tratar erros internos da aplicação.
