@@ -1,5 +1,6 @@
 import {
   CollectionReference,
+  Firestore,
   OrderByDirection,
   Query,
   SetOptions,
@@ -39,8 +40,9 @@ type ReadOptions = {
 export abstract class FirebaseAbstract<T extends Model> {
   /**
    * @param collectionName - Nome da coleção no Firestore
+   * @param firestore - Referência do Firestore
    */
-  public constructor(protected collectionName: string) {}
+  public constructor(protected collectionName: string, protected firestore: Firestore = getFirestore()) {}
 
   /**
    * Adiciona um novo documento ao Firestore.
@@ -293,6 +295,6 @@ export abstract class FirebaseAbstract<T extends Model> {
    * @returns A instância de `CollectionReference`.
    */
   protected collection(): CollectionReference {
-    return getFirestore().collection(this.collectionName);
+    return this.firestore.collection(this.collectionName);
   }
 }
