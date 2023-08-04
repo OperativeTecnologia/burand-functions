@@ -1,6 +1,6 @@
 {
   "name": "@burand/functions",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
   "scripts": {
     "clean": "rimraf lib",
