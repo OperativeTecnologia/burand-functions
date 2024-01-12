@@ -1,4 +1,4 @@
-import { FieldValue, WhereFilterOp } from 'firebase-admin/firestore';
+import { PartialWithFieldValue, WhereFilterOp, WithFieldValue } from 'firebase-admin/firestore';
 import { Model } from '../firestore/Model.js';
 
 /**
@@ -7,9 +7,7 @@ import { Model } from '../firestore/Model.js';
  * @template T - O `Model` para o documento que está sendo adicionado.
  * @returns As chaves de `Model` excluindo os atributos `id`, `createdAt` e `updatedAt`
  */
-export type AddDocument<T extends Model> = {
-  [P in keyof Omit<T, 'id' | 'createdAt' | 'updatedAt'>]: T[P] | FieldValue;
-};
+export type AddDocument<T extends Model> = WithFieldValue<Omit<T, 'id' | 'createdAt' | 'updatedAt'>>;
 
 /**
  * Definição de tipo para criar ou substituir um documento em uma coleção do `Firestore`.
@@ -17,9 +15,7 @@ export type AddDocument<T extends Model> = {
  * @template T - O `Model` para o documento que está sendo adicionado ou substituido.
  * @returns As chaves de `Model` excluindo os atributos `createdAt` e `updatedAt`
  */
-export type SetDocument<T extends Model> = {
-  [P in keyof Omit<T, 'id' | 'createdAt' | 'updatedAt'>]: T[P] | FieldValue;
-} & Pick<T, 'id'>;
+export type SetDocument<T extends Model> = WithFieldValue<Omit<T, 'id' | 'createdAt' | 'updatedAt'>> & Pick<T, 'id'>;
 
 /**
  * Definição de tipo para atualizar um documento em uma coleção do `Firestore`.
@@ -27,9 +23,8 @@ export type SetDocument<T extends Model> = {
  * @template T - O `Model` para o documento que está sendo atualizado.
  * @returns As chaves de `Model` excluindo os atributos `createdAt` e `updatedAt`, com o `id` como obrigatório e o restante dos atributos como opcional
  */
-export type UpdateDocument<T extends Model> = {
-  [P in keyof Omit<T, 'id' | 'createdAt' | 'updatedAt'>]?: T[P] | FieldValue;
-} & Pick<T, 'id'>;
+export type UpdateDocument<T extends Model> = PartialWithFieldValue<Omit<T, 'id' | 'createdAt' | 'updatedAt'>> &
+  Pick<T, 'id'>;
 
 /**
  * Define um tipo para uma cláusula where do Firebase.
