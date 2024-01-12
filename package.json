@@ -12,13 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/flavianoredressa/burand-functions.git"
   },
-  "engines": {
-    "node": "18"
-  },
   "files": [
     "lib/",
-    "tsconfig.json",
-    "package.json"
+    "tsconfig.json"
   ],
   "type": "module",
   "main": "./lib/index.js",
