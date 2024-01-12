@@ -1,6 +1,6 @@
 {
   "name": "@burand/functions",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
   "scripts": {
     "clean": "rimraf lib",
@@ -12,13 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/flavianoredressa/burand-functions.git"
   },
-  "engines": {
-    "node": "18"
-  },
   "files": [
     "lib/",
-    "tsconfig.json",
-    "package.json"
+    "tsconfig.json"
   ],
   "type": "module",
   "main": "./lib/index.js",
@@ -83,17 +79,17 @@
     "zod": "^3.0.0"
   },
   "devDependencies": {
-    "@burand/eslint-config-functions": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.60.0",
-    "@typescript-eslint/parser": "^5.60.0",
-    "eslint": "^8.43.0",
+    "@burand/eslint-config-functions": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.1.3"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
   }
 }

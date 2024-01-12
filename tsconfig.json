@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "module": "es2022",
-    "target": "es2022",
-    "moduleResolution": "node16",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
