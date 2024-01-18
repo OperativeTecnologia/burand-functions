@@ -36,12 +36,7 @@ export async function ensureAuthentication(
   }
 
   try {
-    const decoded = await getAuth().verifyIdToken(token);
-
-    request.user = {
-      uid: decoded.uid,
-      email: decoded.email as string
-    };
+    request.user = await getAuth().verifyIdToken(token);
   } catch {
     throw new ApiError('Invalid token', 'application/invalid-token', 401);
   }

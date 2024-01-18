@@ -1,6 +1,6 @@
 {
   "name": "@burand/functions",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
   "scripts": {
     "clean": "rimraf lib",
@@ -71,12 +71,12 @@
     }
   },
   "dependencies": {
-    "express": "^4.0.0",
-    "express-async-errors": "^3.0.0",
-    "firebase-admin": "^11.0.0",
-    "firebase-functions": "^4.0.0",
-    "got": "^13.0.0",
-    "zod": "^3.0.0"
+    "express": ">=4.0.0",
+    "express-async-errors": ">=3.0.0",
+    "firebase-admin": ">=11.0.0",
+    "firebase-functions": ">=4.0.0",
+    "got": ">=13.0.0",
+    "zod": ">=3.0.0"
   },
   "devDependencies": {
     "@burand/eslint-config-functions": "^3.0.0",
